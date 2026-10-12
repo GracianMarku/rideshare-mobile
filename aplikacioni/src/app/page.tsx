@@ -1,18 +1,47 @@
-
 import { KartaUdhetimi } from "@/components/KartaUdhetimi";
-import { udhetimet } from "@/lib/udhetimet";
+import { lexoUdhetimet, type Udhetim } from "@/lib/udhetimet";
 
-export default function Home() {
+// Lexo databazen ne cdo kerkese
+export const dynamic = "force-dynamic";
+
+export default async function Home() {
+  let udhetimet: Udhetim[];
+
+  try {
+    udhetimet = await lexoUdhetimet();
+  } catch (error) {
+  console.error("Gabim gjate leximit nga Neon:", error);
+
+  return (
+      <main>
+        <h1>RideShare</h1>
+        <p role="alert">
+          Nuk u lidhem me databazen. Provo perseri.
+        </p>
+        <a className="action" href="/">
+          Provo perseri
+        </a>
+      </main>
+    );
+  }
+
   return (
     <main>
-      <h1>RideShare · Udhëtimet për AAB</h1>
-      <p>Zgjidh një nisje dhe lexo detajet para kërkesës.</p>
+      <h1>RideShare · Udhetimet per AAB</h1>
+      <p>Burimi: Neon · te dhena fiktive per ushtrime</p>
 
-      <div className="trip-list">
-        {udhetimet.map((udhetim) => (
-          <KartaUdhetimi key={udhetim.id} udhetim={udhetim} />
-        ))}
-      </div>
+      {udhetimet.length === 0 ? (
+        <p>Nuk ka udhetime per momentin.</p>
+      ) : (
+        <div className="trip-list">
+          {udhetimet.map((udhetim) => (
+            <KartaUdhetimi
+              key={udhetim.id}
+              udhetim={udhetim}
+            />
+          ))}
+        </div>
+      )}
     </main>
   );
 }
