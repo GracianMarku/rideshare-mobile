@@ -47,7 +47,7 @@ export default async function Detajet({
           className="action"
           href={`/udhetimi/${id}/kerkesa`}
         >
-          Kerko vend
+          Provo kerkesen (simulim)
         </Link>
       ) : (
         <button className="action" disabled>
