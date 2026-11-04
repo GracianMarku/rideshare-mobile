@@ -39,30 +39,29 @@ Pas: https://github.com/GracianMarku/rideshare-mobile/commit/e7e426fa689953f0c53
 
 ## Provat qe bera
 
-### Prova 1 - Rrjedha normale
+### Prova 1
 
-Hapat: Hapa listen, zgjodha udhetimin me ID 1 (Prishtine - AAB) dhe klikova "Provo kerkesen (simulim)".
+Hapat: Hapa listen e udhetimeve, zgjodha udhetimin me ID 1 (Prishtine - AAB) dhe klikova "Provo kerkesen (simulim)".
 
 Pritshmeria: Te hapej faqja e simulimit dhe te mos krijohej rezervim real.
 
-Vezhgimi: U shfaq "Simulim: Ne pritje" dhe mesazhi qe kerkesa nuk eshte derguar te shoferi. Prova kaloi.
+Vezhgimi: U shfaq mesazhi "Simulim: Ne pritje" dhe informacioni qe kerkesa nuk eshte derguar te shoferi. Prova kaloi.
 
-### Prova 2 - Kontrolli i korrigjimit
+### Prova 2
 
 Hapat: Hapa detajet e udhetimit me ID 1.
 
 Pritshmeria: Butoni te shfaqej me tekstin e ri "Provo kerkesen (simulim)".
 
-Vezhgimi: Teksti i ri u shfaq sakte. Teksti i vjeter nuk shfaqej me. Prova kaloi.
+Vezhgimi: Teksti i ri u shfaq sakte dhe teksti i vjeter "Kerko vend" nuk shfaqej me. Prova kaloi.
 
-### Prova 3 - Udhetimi pa vende
+### Prova 3
 
 Hapat: Hapa udhetimin me ID 3 (Lipjan - AAB), i cili ka 0 vende te lira.
 
-Pritshmeria: Te shfaqej mesazhi "Nuk ka vende te lira" dhe te mos lejohej klikimi i butonit.
+Pritshmeria: Te shfaqej mesazhi "Nuk ka vende te lira" dhe butoni te ishte i caktivizuar.
 
-Vezhgimi: U shfaqen 0 vende te lira dhe butoni ishte i caktivizuar. Prova kaloi.
-
+Vezhgimi: U shfaqen 0 vende te lira dhe butoni nuk mund te klikohej. Prova kaloi.
 ## Ndryshimi i ri
 
 Nuk eshte dokumentuar ende nje prove e re me hyrje te ndryshuar nga nje koleg.
