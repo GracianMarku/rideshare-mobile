@@ -57,9 +57,17 @@ Perdora AI per te kuptuar Geolocation API, menaxhimin e gjendjeve me React `useS
 
 Vete testova konfirmimin manual, refuzimin e lejes, timeout dhe marrjen e koordinatave me saktesi. Gjithashtu ekzekutova `npm run build`, i cili perfundoi me sukses.
 
-## Prova me nje hyrje te re
+## Prova me një hyrje të re
 
-**Hyrja qe provova:** Vendtakim me vetem tri hapesira.
+Zgjodha te testoj tekstin qe permban vetem hapesira.
+
+- Hyrja që provova: Shkrova tri hapesira ne fushen e vendtakimit dhe klikova "Konfirmo vendtakimin".
+- Parashikimi im para klikimit: Vendtakimi nuk duhet te konfirmohet dhe duhet te shfaqet nje mesazh gabimi.
+- Çfarë pashë realisht: U shfaq mesazhi "Shkruaj nje vendtakim." dhe vendtakimi bosh nuk u konfirmua.
+- Skedari dhe funksioni që e shpjegojnë: `aplikacioni/src/components/Vendtakimi.tsx`, funksioni `konfirmoVendtakimin`.
+- Çfarë kuptova ose korrigjova: Kuptova se `trim()` largon hapesirat nga fillimi dhe fundi i tekstit. Kushti `if (!vendiPastruar)` pengon konfirmimin kur nuk ka tekst.
+
+Kete pjese e shpjegoj ne klase. Kontrolli automatik nuk verifikon vertetesine e proves.
 
 **Parashikimi im para klikimit:** Vendtakimi bosh nuk duhet te konfirmohet dhe duhet te shfaqet nje mesazh gabimi.
 
