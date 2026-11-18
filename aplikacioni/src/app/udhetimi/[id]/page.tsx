@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { gjejUdhetimin } from "@/lib/udhetimet";
 import Vendtakimi from "@/components/Vendtakimi";
+import Preferimi from "@/components/Preferimi";
 
 export const dynamic = "force-dynamic";
 
@@ -44,6 +45,7 @@ export default async function Detajet({
       <p>Vende te lira: {udhetim.vende}</p>
 
       <Vendtakimi />
+      <Preferimi udhetimId={id} />
 
       {udhetim.vende > 0 ? (
         <Link
