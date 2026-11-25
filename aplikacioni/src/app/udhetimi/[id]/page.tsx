@@ -47,18 +47,13 @@ export default async function Detajet({
       <Vendtakimi />
       <Preferimi udhetimId={id} />
 
-      {udhetim.vende > 0 ? (
-        <Link
-          className="action"
-          href={`/udhetimi/${id}/kerkesa`}
-        >
-          Provo kerkesen (simulim)
-        </Link>
-      ) : (
-        <button className="action" disabled>
-          Nuk ka vende te lira
-        </button>
-      )}
+      <Link
+  className="action"
+  href={`/udhetimi/${id}/kerkesa`}
+>
+  Shiko kerkesat
+</Link>
+      
     </main>
   );
 }
